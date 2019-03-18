@@ -1,0 +1,10 @@
+{
+  home: getHomepage {
+    title,
+    hero {
+      path
+    }
+    body: bodyHtml
+    registryUrl
+  }
+}

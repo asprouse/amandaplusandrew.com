@@ -1,0 +1,10 @@
+templatePath: src/templates
+staticPath: static
+buildPath: build
+
+context: data/homepage.graphql
+
+routes:
+  homepage:
+    path: /
+    template: pages/index.html
