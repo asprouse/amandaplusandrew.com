@@ -4,7 +4,7 @@
 <h1>{{ home.title }}</h1>
 <img src="{{ home.hero | image({w: 1000}) }}" alt="Amanda + Andrew"/>
 <div>
-  <a href="{{ home.registryUrl}}">Registry</a>
+  <a target="_blank" rel="noopener noreferrer" class="registry" href="{{ home.registryUrl}}">Registry</a>
 </div>
 <div>{{ home.body | safe }}</div>
 {% endblock %}

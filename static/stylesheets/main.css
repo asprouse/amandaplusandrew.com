@@ -1,4 +1,3 @@
-/*BEGIN - REMOVE WHEN YOU START YOUR PROJECT*/
 html {
   height: 100%;
 }
@@ -9,10 +8,12 @@ body {
   color: rgb(47,	76, 52);
   display: flex;
   font-family: 'Poppins', sans-serif;
-  font-weight: 400;
   height: 100%;
   justify-content: center;
   margin: 0;
   text-align: center;
 }
-/*END - REMOVE WHEN YOU START YOUR PROJECT*/
+
+.registry {
+  font-size: 2rem;
+}
