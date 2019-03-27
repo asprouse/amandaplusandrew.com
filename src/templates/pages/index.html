@@ -1,9 +1,21 @@
 {% extends "layouts/default.html" %}
 
 {% block content %}
-<h1>{{ home.title }}</h1>
-<img src="{{ home.hero | image({w: 1000}) }}" alt="Amanda + Andrew"/>
-<div>
+<div class="top">
+  <div class="frame">
+    <div class="frame-inner">
+      <h1>Amanda + Andrew GET MARRIED</h1>
+    </div>
+  </div>
+
+  <div class="frame">
+    <div class="frame-inner">
+      <img src="{{ home.hero | image({w: 800}) }}" alt="Amanda + Andrew"/>
+    </div>
+  </div>
+
+</div>
+<div class="bottom">
   <a target="_blank" rel="noopener noreferrer" class="registry" href="{{ home.registryUrl}}">Registry</a>
 </div>
 <div>{{ home.body | safe }}</div>
