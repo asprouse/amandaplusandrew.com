@@ -129,16 +129,6 @@ q:before {
   outline: none;
 }
 
-/* Utility classes
- * *********************************** */
-
-.sr-only {
-  position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-  left: -9999px;
-  top: -9999px;
-}
-
 body {
   align-items: center;
   background-color: rgb(249,	243,	233);
@@ -146,6 +136,7 @@ body {
   color: rgb(47,	76, 52);
   display: flex;
   font-family: 'Poppins', sans-serif;
+  font-weight: 300;
   height: 100%;
   justify-content: center;
   margin: 0;
@@ -163,15 +154,41 @@ body {
 
 .bottom {
   padding: 2rem;
+  display:  flex;
+  text-align: left;
 }
 
-.heading {
-  font-size: 2.5rem;
+.bottom section {
+  flex: 1;
 }
 
-.registry {
-  font-size: 2.5rem;
+.bottom .schedule {
+  flex: 2;
 }
+
+.schedule-day, .info-section {
+  margin-bottom: 2rem;
+}
+
+.event-time {
+  padding-right: 0.5rem;
+}
+
+
+.bottom .info {
+  flex: 3;
+}
+
+.registry, h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
 
 .frame {
   display: inline-block;
@@ -189,3 +206,4 @@ body {
 .frame img {
   vertical-align: top;
 }
+

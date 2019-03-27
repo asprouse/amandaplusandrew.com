@@ -2,11 +2,13 @@
 
 {% block content %}
 <div class="top">
-  <div class="frame">
-    <div class="frame-inner">
-      <h1>Amanda + Andrew GET MARRIED</h1>
+  <header>
+    <div class="frame">
+      <div class="frame-inner">
+        <h1>Amanda + Andrew GET MARRIED</h1>
+      </div>
     </div>
-  </div>
+  </header>
 
   <div class="frame">
     <div class="frame-inner">
@@ -16,7 +18,42 @@
 
 </div>
 <div class="bottom">
-  <a target="_blank" rel="noopener noreferrer" class="registry" href="{{ home.registryUrl}}">Registry</a>
+  <section class="registry">
+    <a target="_blank" rel="noopener noreferrer"  href="{{ home.registryUrl}}">Registry</a>
+  </section>
+  <section class="schedule">
+    <h2>Schedule</h2>
+    <ul class="schedule-days">
+      {% for day in home.schedule %}
+      <li class="schedule-day">
+        <h3>{{ day.heading }}</h3>
+        <table class="schedule-days-events">
+          {% for event in day.events %}
+          <tbody>
+            <tr>
+              <td class="event-time">{{ event.start }} {% if event.end %}- {{ event.end }}{% endif %}</td>
+              <td class="event-name">{{ event.event }}</td>
+            </tr>
+          </tbody>
+          {% endfor %}
+        </table>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="info">
+    <h2>Things you'll want to know</h2>
+    <ul class="info-sections">
+      {% for section in home.info %}
+      <li class="info-section">
+        <h3>{{ section.heading }}</h3>
+        <div class="info-description">
+          {{ section.content | safe }}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
 </div>
-<div>{{ home.body | safe }}</div>
 {% endblock %}

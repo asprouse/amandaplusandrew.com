@@ -1,10 +1,27 @@
 {
   home: getHomepage {
-    title,
+    body: bodyHtml
     hero {
       path
     }
-    body: bodyHtml
+    info {
+      content: contentHtml
+      heading
+    }
     registryUrl
+    schedule {
+      events {
+        end
+        event
+        period
+        start
+      }
+      heading
+    }
+    title
+    contact {
+      heading
+      email
+    }
   }
 }
