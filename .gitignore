@@ -7,3 +7,5 @@ build
 .tsgrc
 graphql.config.json
 .githubtoken
+.graphqlconfig
+tsg-project.graphql
