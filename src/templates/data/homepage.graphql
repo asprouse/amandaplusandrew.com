@@ -1,6 +1,5 @@
 {
   home: getHomepage {
-    body: bodyHtml
     hero {
       path
     }

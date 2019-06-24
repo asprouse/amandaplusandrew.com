@@ -6,7 +6,7 @@
   <ul class="photos">
     {% for photo in items %}
     <li class="photo">
-      <a target="_blank" href="{{ photo.path | image }}">
+      <a target="_blank" href="{{ photo.path | image }}" title="click for hi-res">
         <img src="{{ photo.path | image({w: 800}) }}" />
       </a>
     </li>
