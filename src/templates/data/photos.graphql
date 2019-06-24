@@ -1,0 +1,8 @@
+{
+  getAssetList(filter: {bool: {must_not: {term: {hidden: "true"}}}}) {
+    items {
+      path
+      caption: captionHtml
+    }
+  }
+}

@@ -2,9 +2,16 @@ templatePath: src/templates
 staticPath: static
 buildPath: build
 
-context: data/homepage.graphql
-
 routes:
   homepage:
     path: /
+    context: data/homepage.graphql
     template: pages/index.html
+
+  photos:
+    paginate:
+      path: /photos/page-:num
+      template: pages/photos.html
+      firstPage: /photos
+      pageSize: 1000
+      data: data/photos.graphql

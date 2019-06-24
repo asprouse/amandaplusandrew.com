@@ -5,21 +5,20 @@
   <header>
     <div class="frame">
       <div class="frame-inner">
-        <h1>Amanda + Andrew GET MARRIED</h1>
+        <h1>{{ home.title }}</h1>
       </div>
     </div>
   </header>
 
-  <div class="frame">
-    <div class="frame-inner">
-      <img src="{{ home.hero | image({w: 800}) }}" alt="Amanda + Andrew"/>
+  <a href="/photos">
+    <div class="frame">
+      <div class="frame-inner">
+        <img src="{{ home.hero | image({w: 800}) }}" alt="Amanda + Andrew"/>
+      </div>
     </div>
-  </div>
+  </a>
 
 </div>
-<section class="registry">
-  <a target="_blank" rel="noopener noreferrer"  href="{{ home.registryUrl}}">Registry</a>
-</section>
 <div class="bottom">
   <section class="schedule">
     <h2>Schedule</h2>

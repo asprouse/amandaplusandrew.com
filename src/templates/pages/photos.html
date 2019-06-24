@@ -1,0 +1,16 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+<div class="photos">
+  <h1>Photos</h1>
+  <ul class="photos">
+    {% for photo in items %}
+    <li class="photo">
+      <a target="_blank" href="{{ photo.path | image }}">
+        <img src="{{ photo.path | image({w: 800}) }}" />
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
