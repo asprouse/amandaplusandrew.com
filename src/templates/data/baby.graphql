@@ -1,6 +1,17 @@
 query {
   baby: getBaby {
     title
+    backgroundColor {
+      triangleColorDark {
+        hex
+      }
+      triangleColorLight {
+        hex
+      }
+      triangleColorMedium {
+        hex
+      }
+    }
     descriptionHtml
     formEmbedCode
     image {

@@ -1,28 +1,29 @@
+{% import "layouts/triangles.svg" as triangles %}
 {% extends "layouts/default.html" %}
-
+{% set light = baby.backgroundColor.triangleColorLight.hex %}
+{% set medium = baby.backgroundColor.triangleColorMedium.hex %}
+{% set dark = baby.backgroundColor.triangleColorDark.hex %}
+{% set svg = triangles.svg(light, medium, dark) | urlencode | replace("%0A", "") %}
 {% block content %}
-<div class="top">
-  <header>
+<style>
+  .top {
+    background-image: url("data:image/svg+xml;utf8,{{ svg.split('&')[0].split('=')[1]  }}")
+  }
+</style>
+<script>
+  console.log("{{ light }}")
+</script>
+<div class="event">
+  <div class="top">
     <div class="frame">
-      <div class="frame-inner">
-        <h1>{{ baby.title }}</h1>
-      </div>
+        <img src="{{ baby.image | image({w: 800}) }}" alt="{{ baby.title }}"/>
     </div>
-  </header>
-
-  <a href="/photos" title="Click for photos!">
-    <div class="frame">
-      <div class="frame-inner">
-        <img src="{{ baby.image | image({w: 800}) }}" alt="Amanda + Andrew"/>
-      </div>
-    </div>
-  </a>
-
-</div>
-<div class="bottom">
-  <div>
-  {{ baby.descriptionHtml | safe }}
   </div>
-  {{ baby.formEmbedCode | safe }}
+  <div class="bottom">
+    <div>
+    {{ baby.descriptionHtml | safe }}
+    </div>
+    {{ baby.formEmbedCode | safe }}
+  </div>
 </div>
 {% endblock %}
