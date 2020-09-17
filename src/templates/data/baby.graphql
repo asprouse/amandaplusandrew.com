@@ -1,0 +1,10 @@
+query {
+  baby: getBaby {
+    title
+    descriptionHtml
+    formEmbedCode
+    image {
+      path
+    }
+  }
+}

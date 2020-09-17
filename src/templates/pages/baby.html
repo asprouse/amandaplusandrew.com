@@ -1,0 +1,28 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+<div class="top">
+  <header>
+    <div class="frame">
+      <div class="frame-inner">
+        <h1>{{ baby.title }}</h1>
+      </div>
+    </div>
+  </header>
+
+  <a href="/photos" title="Click for photos!">
+    <div class="frame">
+      <div class="frame-inner">
+        <img src="{{ baby.image | image({w: 800}) }}" alt="Amanda + Andrew"/>
+      </div>
+    </div>
+  </a>
+
+</div>
+<div class="bottom">
+  <div>
+  {{ baby.descriptionHtml | safe }}
+  </div>
+  {{ baby.formEmbedCode | safe }}
+</div>
+{% endblock %}

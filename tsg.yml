@@ -8,6 +8,11 @@ routes:
     context: data/homepage.graphql
     template: pages/index.html
 
+  baby:
+    path: /baby
+    context: data/baby.graphql
+    template: pages/baby.html
+
   photos:
     paginate:
       path: /photos/page-:num
