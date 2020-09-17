@@ -163,6 +163,10 @@ body {
   background-color: #ffa233;
 }
 
+.event .top {
+  background-image: none;
+}
+
 .event a {
   color: #a700e6;
 }
@@ -172,6 +176,7 @@ body {
 }
 
 .event .bottom{
+  background-color: #ffa233;
   width: 80rem;
   margin: auto;
 }

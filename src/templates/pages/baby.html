@@ -3,17 +3,18 @@
 {% set light = baby.backgroundColor.triangleColorLight.hex %}
 {% set medium = baby.backgroundColor.triangleColorMedium.hex %}
 {% set dark = baby.backgroundColor.triangleColorDark.hex %}
-{% set svg = triangles.svg(light, medium, dark) | urlencode | replace("%0A", "") %}
+{% set svg = triangles.svg(dark, medium, light) | urlencode | replace("%0A", "") %}
 {% block content %}
 <style>
-  .top {
-    background-image: url("data:image/svg+xml;utf8,{{ svg.split('&')[0].split('=')[1]  }}")
+  .triangles {
+    background-size: 10rem;
+    background-image: url("data:image/svg+xml;utf8,{{ svg.split('&')[0].split('=')[1]  }}");
   }
 </style>
 <script>
   console.log("{{ light }}")
 </script>
-<div class="event">
+<div class="event triangles">
   <div class="top">
     <div class="frame">
         <img src="{{ baby.image | image({w: 800}) }}" alt="{{ baby.title }}"/>
