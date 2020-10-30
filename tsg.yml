@@ -8,10 +8,17 @@ routes:
     context: data/homepage.graphql
     template: pages/index.html
 
-  baby:
-    path: /baby
+  baby-pumpkin:
+    path: /baby-pumpkin
     context: data/baby.graphql
     template: pages/baby.html
+
+  event:
+    path: /:slug
+    template: pages/event.html
+    paginate:
+      data: data/event.graphql
+
 
   photos:
     paginate:

@@ -1,0 +1,24 @@
+query {
+  baby: getEventList {
+    items {
+      title
+      slug
+      backgroundColor {
+        triangleColorDark {
+          hex
+        }
+        triangleColorLight {
+          hex
+        }
+        triangleColorMedium {
+          hex
+        }
+      }
+      descriptionHtml
+      embedCode
+      image {
+        path
+      }
+    }
+  }
+}
