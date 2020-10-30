@@ -3,6 +3,9 @@ query {
     items {
       title
       slug
+      bkgrdColor {
+        hex
+      }
       backgroundColor {
         triangleColorDark {
           hex

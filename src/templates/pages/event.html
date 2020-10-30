@@ -6,14 +6,14 @@
 {% set svg = triangles.svg(dark, medium, light) | urlencode | replace("%0A", "") %}
 {% block content %}
 <style>
+  .event .bottom {
+    background-color: {{ item.bkgrdColor.hex }};
+  }
   .triangles {
     background-size: 10rem;
     background-image: url("data:image/svg+xml;utf8,{{ svg.split('&')[0].split('=')[1]  }}");
   }
 </style>
-<script>
-  console.log("{{ light }}")
-</script>
 <div class="event triangles">
   <div class="top">
     <div class="frame">
