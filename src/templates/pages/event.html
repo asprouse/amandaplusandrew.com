@@ -4,6 +4,7 @@
 {% set medium = item.backgroundColor.triangleColorMedium.hex %}
 {% set dark = item.backgroundColor.triangleColorDark.hex %}
 {% set svg = triangles.svg(dark, medium, light) | urlencode | replace("%0A", "") %}
+{% block title %}{{ item.title }}{% endblock %}
 {% block content %}
 <style>
   .event .bottom {
